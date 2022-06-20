@@ -1,0 +1,24 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+
+<div *ngFor="let dateArray of filterUiArray">
+  <h1>{{ dateArray.year }}</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dateArray.objValue">
+        <th scope="row">{{ data.paymentDate }}</th>
+        <td>{{ data.principalAmount }}</td>
+        <td>{{ data.interestAmount }}</td>
+        <td>{{ data.installmentAmount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
